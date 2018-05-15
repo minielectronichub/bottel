@@ -1,0 +1,2 @@
+class Branche < ApplicationRecord
+end
