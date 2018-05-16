@@ -4,7 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-#ruby '2.3.3'
+ruby '2.3.3'
 gem 'simple_form', '~> 4.0'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -36,12 +36,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
  #Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 
 group :development do
-  gem 'sqlite3'
+
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] 
   gem 'web-console', '>= 3.3.0'
@@ -52,6 +53,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :production do
+  gem 'sqlite3'
+end
 #group :test do
   # Adds support for Capybara system testing and selenium driver
  # gem 'capybara', '>= 2.15', '< 4.0'
