@@ -39,13 +39,11 @@ end
 
 group :production do
  gem 'pg', '~> 1.0'
- #gem 'pg'
  gem 'rails_12factor', '~> 0.0.3'
 end
 
 group :development  do
   gem 'sqlite3', '~> 1.3', '>= 1.3.13'
-  #gem 'sqlite3'
 end
 
 
